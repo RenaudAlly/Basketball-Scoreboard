@@ -1,33 +1,47 @@
-<html>
+<!DOCTYPE html>
+<html lang = "en">
     <head>
-        <link rel="stylesheet" href="index.css">
         <meta charset="UTF-8">
+        <title>ally's Basketball Scoreboard</title>
+        <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="container">
-            <div id = "title-el">
+        <div class="scoreContainer">
+            <div class = "title-el">
                 <h3>HOME</h3>
                 <div id = "homeScore-el">0</div>
-                <button class = "button" onclick = "addOneHome()">+1</button>
-                <button class = "button" onclick = "addTwoHome()">+2</button>
-                <button class = "button" onclick = "addThreeHome()">+3</button>
+                <button type = "button" class = "button" onclick = "addOneHome()">+1</button>
+                <button type = "button" class = "button" onclick = "addTwoHome()">+2</button>
+                <button type = "button" class = "button" onclick = "addThreeHome()">+3</button>
             </div>
             <div id = "period-el">
-                PERIOD 
+                QTR 
                 <p id = "periodIncrease"  onclick = "increasePeriod()">⬆️</p>
                 <p id = "periodScore-el">0</p>
             </div>
-            <div id = "title-el">
-                <h3>GUEST</h3>
+            <div class = "title-el">
+                <h3>AWAY</h3>
                 <div id = "guestScore-el">0</div>
-                <button class = "button" onclick = "addOneGuest()">+1</button>
-                <button class = "button" onclick = "addTwoGuest()">+2</button>
-                <button class = "button" onclick = "addThreeGuest()">+3</button>
+                <button type = "button" class = "button" onclick = "addOneGuest()">+1</button>
+                <button type = "button" class = "button" onclick = "addTwoGuest()">+2</button>
+                <button type = "button" class = "button" onclick = "addThreeGuest()">+3</button>
             </div>
+        </div><br><br>
+        <div class = "foulsContainer">   <!-- Has to be declared as a class for flex to work -->
+            <div class = "foulsText">
+                FOULS
+                <p id = "homeFouls-el" onclick="incrementHomeFoul()">0</p>
+            </div>
+            <div class = "foulsText">
+                FOULS
+                <p id = "guestFouls-el" onclick="incrementGuestFoul()">0</p>
+            </div>
+        </div>><br><br>
+        <div class = "newGame">
+            <button type = "reset" class = "button" id = "newGameButton" >New Game</button>
         </div>
-        <!-- <div id = "options">
-            <h2>Options</h2>
-        </div> -->
         <script src="index.js"></script>
-    </body>
+    </body> 
 </html>
+<!-- onclick = "newGame();" -->

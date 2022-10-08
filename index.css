@@ -11,7 +11,7 @@ body {
     background-color: #1B244A; 
 }
 
-.container {
+.scoreContainer {
     display: flex; 
     /* We want to start by dividing it into two different columns
      * so we use a flexbox to achieve that    
@@ -22,7 +22,7 @@ body {
      */
 }
 
-#title-el {
+.title-el {
     /* Note that many of these values have been used with Figma's help*/
     font-family: 'Verdana';
     font-style: normal;
@@ -49,6 +49,8 @@ body {
      * a fantastic resource. For example, line-height can be used
      * to vertically align a single line if we know 
      */
+
+     cursor: pointer;
 }
 
 #periodScore-el {
@@ -114,5 +116,86 @@ body {
 
     color: #9AABD8;
     background-color: #1B244A;
+    font-family: TimerFont;    
+}
+
+button:hover {
+    border: 2px solid #addf2f;
+    color: #addf2f;
+    cursor: pointer;
+}
+
+.foulsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.foulsText {
+    font-family: 'Verdana';
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#homeFouls-el {
+    background-color: #080001;
+    height: 70px;
+    line-height: 80px; /* Lihe height used to center align*/
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    width: 50px;
+
     font-family: TimerFont;
+    font-size: 45px;
+    color: #FFC72C;
+
+    cursor: pointer;
+}
+
+#guestFouls-el {
+    background-color: #080001;
+    height: 70px;
+    line-height: 80px; 
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    width: 50px;
+
+    font-family: TimerFont;
+    font-size: 45px;
+    color: #FFC72C;
+
+    cursor: pointer;
+}
+
+.newGame {
+    text-align: center; /* Centering button in block using text-align*/
+}
+
+#newGameButton {
+    box-sizing: border-box;
+    
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+
+    width: 100px; 
+    /* These are specifications to get a desired position for the text inside
+     * the box itself. It DOES NOT adjust AROUND the box
+     */
+    height: 45px;
+    left: 82px;
+    top: 271px;
+
+    color: #9AABD8;
+    background-color: #1B244A;
+    font-family: 'Verdana';    
+}
+
+#newGameButton:hover {
+    border: 2px solid #addf2f;
+    color: #addf2f;
+    cursor: pointer;
 }
