@@ -27,10 +27,40 @@ body {
     font-family: 'Verdana';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
+    color: #FFFFFF;
+}
+
+#period-el {
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    justify-content: center;
 
     color: #FFFFFF;
+
+    padding-top: 135px;
+    height: 183px;
+    text-align: center;
+    width: 123px;
+    /* Centering in CSS can get tricky so howtocenterincss.com is
+     * a fantastic resource. For example, line-height can be used
+     * to vertically align a single line if we know 
+     */
+}
+
+#periodScore-el {
+    /* 123 x 24 */
+    padding-top: 20px;
+    background-color: #080001;
+    margin-top: 15px; /* We have lessened the border at the top */
+    height: 60px;
+
+    font-family: TimerFont;
+    font-size: 45px;
+    color: #FFC72C;
 }
 
 #homeScore-el { 
@@ -46,6 +76,10 @@ body {
                    * inside of the width, whereas border radius comes around
                    * it
                    */
+    margin-bottom: 10px; /* Using margin-bottom to create space between
+                          * our black box (one container) and the buttons
+                          * which is technically a different inline block
+                          */
 }
 
 #guestScore-el { 
@@ -58,6 +92,7 @@ body {
     height: 8vh;
 
     padding: 4vh;
+    margin-bottom: 10px;
 }
 
 .button {
@@ -65,7 +100,7 @@ body {
      * are using a common division for CSS beautification 
      */
     box-sizing: border-box;
-
+    
     border: 2px solid #9AABD8;
     border-radius: 5px;
 
@@ -78,6 +113,6 @@ body {
     top: 271px;
 
     color: #9AABD8;
+    background-color: #1B244A;
     font-family: TimerFont;
-
 }

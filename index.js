@@ -1,8 +1,8 @@
-let homeScore = 0
-let guestScore = 0
+let homeScore = 0;
+let guestScore = 0;
 
-let homeScoreEl = document.getElementById("homeScore-el")
-let guestScoreEl = document.getElementById("guestScore-el") 
+let homeScoreEl = document.getElementById("homeScore-el");
+let guestScoreEl = document.getElementById("guestScore-el");
 
 function addOneHome() {
     homeScore += 1;
@@ -32,4 +32,13 @@ function addTwoGuest() {
 function addThreeGuest() {
     guestScore += 3;
     guestScoreEl.textContent = guestScore;
+}
+
+let periodScore = 0;
+let periodScoreEl = document.getElementById("periodScore-el");
+
+function increasePeriod() {
+    periodScore += 1;
+    periodScore = periodScore % 5; // Wraps around to 0 after hitting 4
+    periodScoreEl.textContent = periodScore;
 }

@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
     </head>
     <body>
         <div class="container">
@@ -11,6 +12,11 @@
                 <button class = "button" onclick = "addTwoHome()">+2</button>
                 <button class = "button" onclick = "addThreeHome()">+3</button>
             </div>
+            <div id = "period-el">
+                PERIOD 
+                <p id = "periodIncrease"  onclick = "increasePeriod()">⬆️</p>
+                <p id = "periodScore-el">0</p>
+            </div>
             <div id = "title-el">
                 <h3>GUEST</h3>
                 <div id = "guestScore-el">0</div>
@@ -19,6 +25,9 @@
                 <button class = "button" onclick = "addThreeGuest()">+3</button>
             </div>
         </div>
+        <!-- <div id = "options">
+            <h2>Options</h2>
+        </div> -->
         <script src="index.js"></script>
     </body>
 </html>
