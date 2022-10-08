@@ -1,0 +1,70 @@
+@font-face {
+    font-family: TimerFont;
+    src: url(CursedTimerUlil-Aznm.ttf); 
+    /* Adding a new font using a .tff file which we have uploaded
+     * to our coding folder
+     */
+}
+
+body {
+    margin: 0; 
+    background-color: #1B244A; 
+}
+
+.container {
+    display: flex; 
+    /* We want to start by dividing it into two different columns
+     * so we use a flexbox to achieve that    
+     */
+    justify-content: space-evenly; 
+    /* This achieves a specific desired layout but there can be multiple 
+     * values which can help us to achieve that   
+     */
+}
+
+#title-el {
+    /* Note that many of these values have been used with Figma's help*/
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#score-el { /* Since we have the same formatting for both columns essentially we
+             * are using a common division for CSS beautification 
+             */
+    font-family: TimerFont;
+    color: #F94F6D;
+    font-size: 10vh;
+
+    background: #080001;
+    width: 14vh;
+    height: 8vh;
+
+    padding: 4vh; /* Keep in mind how the box looks in CSS, padding is on the
+                   * inside of the width, whereas border radius comes around
+                   * it
+                   */
+}
+
+.button {
+    box-sizing: border-box;
+
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+
+    width: 45px; 
+    /* These are specifications to get a desired position for the text inside
+     * the box itself. It DOES NOT adjust AROUND the box
+     */
+    height: 45px;
+    left: 82px;
+    top: 271px;
+
+    color: #9AABD8;
+    font-family: TimerFont;
+
+}
