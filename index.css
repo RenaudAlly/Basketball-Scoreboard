@@ -33,9 +33,7 @@ body {
     color: #FFFFFF;
 }
 
-#score-el { /* Since we have the same formatting for both columns essentially we
-             * are using a common division for CSS beautification 
-             */
+#homeScore-el { 
     font-family: TimerFont;
     color: #F94F6D;
     font-size: 10vh;
@@ -50,7 +48,22 @@ body {
                    */
 }
 
+#guestScore-el { 
+    font-family: TimerFont;
+    color: #F94F6D;
+    font-size: 10vh;
+
+    background: #080001;
+    width: 14vh;
+    height: 8vh;
+
+    padding: 4vh;
+}
+
 .button {
+    /* Since we have the same formatting for both columns essentially we
+     * are using a common division for CSS beautification 
+     */
     box-sizing: border-box;
 
     border: 2px solid #9AABD8;
