@@ -11,6 +11,64 @@ body {
     background-color: #1B244A; 
 }
 
+.timer {
+    text-align: center;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-bottom: -20px;
+}
+
+#nbaGameClock {
+    font-family: TimerFont;
+    font-size: 5vh;
+    color: #F94F6D;
+
+    background: #080001;
+    border-style: solid;    
+    border-color: white;
+    width: 200px;
+
+    line-height: 92px;
+    margin-left:auto;
+    margin-right:auto;
+    width:212px; /* Here we knew the dimensions of our timer block so we set it as that
+                  * Then we can auto-set its position by shifting the margins. The auto
+                  * value is meant to center the block-level element
+                  */
+    height:92px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.timerButtons {
+    box-sizing: border-box;
+    
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+
+    width: 100px; 
+    /* These are specifications to get a desired position for the text inside
+     * the box itself. It DOES NOT adjust AROUND the box
+     */
+    height: 45px;
+    left: 82px;
+    top: 271px;
+
+    color: #9AABD8;
+    background-color: #1B244A;
+    font-family: 'Verdana'; 
+}
+
+.timerButtons:hover {
+    border: 2px solid #addf2f;
+    color: #addf2f;
+    cursor: pointer;
+}
+
 .scoreContainer {
     display: flex; 
     /* We want to start by dividing it into two different columns
@@ -41,7 +99,7 @@ body {
 
     color: #FFFFFF;
 
-    padding-top: 135px;
+    margin-top: 90px;
     height: 183px;
     text-align: center;
     width: 123px;

@@ -7,7 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="scoreContainer">
+        <div class = "timer">
+            <h3>TIMER</h3> 
+            <!-- We can use span to put id for multiple numbers in the same block -->
+            <p id = "nbaGameClock" ><span id = "nbaGameClockMinutes">12</span>:<span id = "nbaGameClockSeconds">00</span></p>
+            <button type = "submit" class = "timerButtons" id = "startClockButton" onclick = "startClock()">Start</button>
+            <button type = "reset" class = "timerButtons" id = "resetClockButton" onclick = "resetClock()">Reset</button>
+        </div>
+        <div class = "scoreContainer">
             <div class = "title-el">
                 <h3>HOME</h3>
                 <div id = "homeScore-el">0</div>
@@ -18,7 +25,7 @@
             <div id = "period-el">
                 QTR 
                 <p id = "periodIncrease"  onclick = "increasePeriod()">⬆️</p>
-                <p id = "periodScore-el">0</p>
+                <p id = "periodScore-el">1</p>
             </div>
             <div class = "title-el">
                 <h3>AWAY</h3>
@@ -39,9 +46,8 @@
             </div>
         </div>><br><br>
         <div class = "newGame">
-            <button type = "reset" class = "button" id = "newGameButton" >New Game</button>
+            <button type = "reset" class = "button" id = "newGameButton" onclick = "newGame()">New Game</button>
         </div>
         <script src="index.js"></script>
     </body> 
 </html>
-<!-- onclick = "newGame();" -->
