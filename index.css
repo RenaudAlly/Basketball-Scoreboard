@@ -88,6 +88,9 @@ body {
     font-size: 30px;
     text-align: center;
     color: #FFFFFF;
+
+    height: 327px;
+    width: 211px;
 }
 
 #period-el {
@@ -126,6 +129,8 @@ body {
 #homeScore-el { 
     font-family: TimerFont;
     color: #F94F6D;
+    border: 3px solid transparent #FFC72C; /* We are keeping the border transparent and only showing it when they're 
+    leader (using javascript logic). hidden is equivalent to none */
     font-size: 10vh;
 
     background: #080001;
@@ -145,6 +150,7 @@ body {
 #guestScore-el { 
     font-family: TimerFont;
     color: #F94F6D;
+    border: 3px solid transparent #FFC72C;
     font-size: 10vh;
 
     background: #080001;

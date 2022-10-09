@@ -1,6 +1,6 @@
 let homeScore = 0;
 let guestScore = 0;
-let periodScore = 0;
+let periodScore = 1;
 let numHomeFouls = 0;
 let numGuestFouls = 0;
 
@@ -72,45 +72,66 @@ function stopClock() {
 }
 
 function highlightLeader() {
-    /* TODO: Call this function from the onclick buttons to check
-     * who is the current leader at that particular instance. If
-     * someone is the leader, make their yellow border visible.
-     * Otherwise if both are equal, don't highlight anyone
-     */
+    let homeScore = parseInt(homeScoreEl.innerText)
+    let guestScore = parseInt(guestScoreEl.innerText)
+
+    if (homeScore > guestScore) {
+        homeScoreEl.style.border = "3px solid #FFC72C";
+        guestScoreEl.style.border = "3px solid transparent";
+    } else if (homeScore == guestScore) {
+        homeScoreEl.style.border = "3px solid transparent";
+        guestScoreEl.style.border = "3px solid transparent";
+    }
+    else if (guestScore > homeScore) {
+        homeScoreEl.style.border = "3px solid transparent";
+        guestScoreEl.style.border = "3px solid #FFC72C";
+    }
 }
 
 function addOneHome() {
     homeScore += 1;
     homeScoreEl.textContent = homeScore;
+    highlightLeader();
 }
 
 function addTwoHome() {
     homeScore += 2;
     homeScoreEl.textContent = homeScore;
+    highlightLeader();
 }
 
 function addThreeHome() {
     homeScore += 3;
     homeScoreEl.textContent = homeScore;
+    highlightLeader();
 }
 
 function addOneGuest() {
     guestScore += 1;
     guestScoreEl.textContent = guestScore;
+    highlightLeader();
 }
 
 function addTwoGuest() {
     guestScore += 2;
     guestScoreEl.textContent = guestScore;
+    highlightLeader();
 }
 
 function addThreeGuest() {
     guestScore += 3;
     guestScoreEl.textContent = guestScore;
+    highlightLeader();
 }
 
 function increasePeriod() {
-    periodScore = (periodScore + 1) % 5; // Wraps around to 0 after hitting 4
+    periodScore += 1;
+    // Wraps around to 1 after hitting 4
+    if (periodScore == 5) {
+        periodScore = 1;
+    } else {
+        periodScore %= 5;
+    }
     periodScoreEl.textContent = periodScore;
 }
 
@@ -138,5 +159,7 @@ function newGame() {
     homeFoulsEl.textContent = numHomeFouls;
     guestFoulsEl.textContent = numGuestFouls;
 
+    homeScoreEl.style.border = "3px solid transparent";
+    guestScoreEl.style.border = "3px solid transparent";
     resetClock();
 }
